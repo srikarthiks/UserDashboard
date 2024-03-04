@@ -28,7 +28,8 @@
                                 <label for="mother_name" class="block text-sm font-medium text-gray-700">Mother's Name:</label>
                                 <input type="text" name="mother_name" id="mother_name" class="mt-1 p-2 w-full border rounded-md" value="{{ optional(auth()->user()->profile)->mother_name }}">
                             </div>
-                            <button type="submit" class="mt-5 text-blue-700 font-bold py-2 px-4 rounded border border-blue-700">Update Profile</button>
+                            <button type="submit" class="mt-5 text-blue  font-bold py-2 px-4 rounded ">Update Profile</button>
+
 
                         </form>
                     </div>
@@ -45,13 +46,13 @@
                                         <p>{{ $address->address2 }}</p>
                                     @endif
                                     <p>{{ $address->pincode }}</p>
-                                    <a href="{{ route('dashboard.address.edit', $address) }}" class="font-bold py-6 px-4 rounded bg-white text-blue-700 mt-5">Edit</a>
+                                    <a href="{{ route('dashboard.address.edit', $address) }}" class="font-bold py-6 px-4 rounded text-blue-700 mt-5">Edit</a>
 
                                 </li>
                             @endforeach
                         </ul>
 
-                        <a href="{{ route('dashboard.address.create') }}" class="font-bold py-2 px-4 rounded bg-white text-blue-700">Add Address</a>
+                        <a href="{{ route('dashboard.address.create') }}" class="font-bold py-2 px-4 rounded  text-blue-700">Add Address</a>
                     </div>
                 </div>
             </div>
