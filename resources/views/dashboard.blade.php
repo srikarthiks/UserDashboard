@@ -28,7 +28,8 @@
                                 <label for="mother_name" class="block text-sm font-medium text-gray-700">Mother's Name:</label>
                                 <input type="text" name="mother_name" id="mother_name" class="mt-1 p-2 w-full border rounded-md" value="{{ optional(auth()->user()->profile)->mother_name }}">
                             </div>
-                            <button type="submit" class="mt-5 text-blue  font-bold py-2 px-4 rounded ">Update Profile</button>
+
+                            <button type="button" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Update Profile</button>
 
 
                         </form>
@@ -41,12 +42,12 @@
                         <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             @foreach(auth()->user()->addresses as $address)
                                 <li class="bg-gray-100 shadow-sm rounded-md p-4">
-                                    <p>{{ $address->address1 }}</p>
+                                    <p>{{ $address->address1 }},</p>
                                     @if ($address->address2)
-                                        <p>{{ $address->address2 }}</p>
+                                        <p>{{ $address->address2 }},</p>
                                     @endif
                                     <p>{{ $address->pincode }}</p>
-                                    <a href="{{ route('dashboard.address.edit', $address) }}" class="font-bold py-6 px-4 rounded text-blue-700 mt-5">Edit</a>
+                                    <a href="{{ route('dashboard.address.edit', $address) }}" class="font-bold mt-3 py-6 px-1 rounded text-blue-700 mt-5">Edit</a>
 
                                 </li>
                             @endforeach
