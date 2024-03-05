@@ -24,3 +24,9 @@ The dashboard route is protected and only accessible for logged-in users.
 Unauthorized users will be redirected to the login page.
 License
 This project is licensed under the MIT License.
+How to run:
+To run a project in terminal run the comnand:
+PHP artisan serve
+to get full view run node also
+For that use the command:
+npm run dev
